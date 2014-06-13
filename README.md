@@ -25,9 +25,6 @@ add:
 	e.g. Sqlite3-Database on *nix:
 		sqlite3 /{path}/{to}/owncloud/data/owncloud.db 'DELETE FROM oc_filecache;'
 
-
-		
-		
 Normal-Installation:
 1. Download Master as Zip.
 2. Unzip
