@@ -1,0 +1,31 @@
+#gpx-toolbar {
+	position:absolute; 
+	top:45px; 
+	right: 5px;
+	width:62px; 
+	height:20px;
+	z-index:1; 
+	
+	background-color:#fff;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#gpx_close {
+	margin-left: 5px;
+	cursor: pointer;
+	cursor: hand;
+
+}
+
+a.close {
+	padding-left: 23px;
+    background: url("../img/bt_close.png") no-repeat scroll left 0 rgba(0, 0, 0, 0);
+}
+
+a.close:hover {
+     background-position:0 -20px;
+	 color: red;
+}

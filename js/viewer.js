@@ -8,7 +8,7 @@ function viewGpx(dir, file) {
 
     // fade out file list and show gpx canvas
     $('table').fadeOut('slow').promise().done(function(){
-      var canvashtml = '<div id="gpx-canvas" style="width: 100%; height: 100%;"></div>';
+      var canvashtml = '<div id="gpx-canvas" style="width: 100%; height: 100%;"></div><div id="gpx-toolbar"><span id="close_gpx"><a id="close" class="close" href="javascript:void(0)" style="display: block;">Close</a></span></div>';
       $('table').after(canvashtml);
       // in case we are on the public sharing page we shall display the gpx into the preview tag
       $('#preview').html(canvashtml);
@@ -45,7 +45,7 @@ $(document).ready(function() {
     FileActions.setDefault('application/gpx','View');
   }
 
-  $('#gpx_close').live('click',function() {
-    closegpxViewer();	
+  $('.close').live('click',function() {
+    closegpxViewer();
   });
 });
