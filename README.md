@@ -17,19 +17,28 @@ Please check the Permissions for writing, at the moment the Installationroutine 
 If you DON'T want the installer to modify your mimetypes.list.php, create a file called 'installed' in the app-folder 'sys'. This prevents the app to run the automatic-installation.
 
 If you want to add the gpx support by yourself:
+
 1. Open the mimetypes.list.php
+
 add:
 	'gpx' => array('application/gpx', null),
 
 2. Clear the filecache in the Database
+
 	e.g. Sqlite3-Database on *nix:
 		sqlite3 /{path}/{to}/owncloud/data/owncloud.db 'DELETE FROM oc_filecache;'
 
+
 Normal-Installation:
+---------
 1. Download Master as Zip.
+
 2. Unzip
+
 3. Rename the Folder to 'files_gpxviewer'
+
 4. Upload to owncloud/apps
+
 5. Activate
 
 
