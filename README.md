@@ -10,36 +10,35 @@ This Plugin is using [LeafletJS][0] and [GPX plugin by Maxime Petazzoni][2].
 HowTo Use
 ---------
 
-** IMPORTANT **
-This App modifies the mimetypes.list.php (lib/private/mimetypes.list.php) to enable .gpx support
-Please check the Permissions for writing, at the moment the Installationroutine does NOT care about success or fail to overwrite this file.
+** **IMPORTANT** **
+This App modifies the `mimetypes.list.php` (`lib/private/mimetypes.list.php`) to enable .gpx support
+Please check the Permissions for writing, at the moment the Installationroutine does **NOT** care about success or fail while overwrite thie file.
 
-If you DON'T want the installer to modify your mimetypes.list.php, create a file called 'installed' in the app-folder 'sys'. This prevents the app to run the automatic-installation.
+If you **DON'T** want that the installer to modifies your `mimetypes.list.php`, create a file called `installed` located in the app-folder `sys` (`apps/files_gpxviewer/sys/`). This prevents the app to run the automatic-installation.
 
 If you want to add the gpx support by yourself:
 
-1. Open the mimetypes.list.php
+- Open the `mimetypes.list.php` and add
 
-add:
+	```
 	'gpx' => array('application/gpx', null),
+	```
 
-2. Clear the filecache in the Database
-
+- Clear the filecache in the Database
 	e.g. Sqlite3-Database on *nix:
-		sqlite3 /{path}/{to}/owncloud/data/owncloud.db 'DELETE FROM oc_filecache;'
+
+	```
+	sqlite3 /{path}/{to}/owncloud/data/owncloud.db 'DELETE FROM oc_filecache;'
+	```
 
 
 Normal-Installation:
 ---------
-1. Download Master as Zip.
-
-2. Unzip
-
-3. Rename the Folder to 'files_gpxviewer'
-
-4. Upload to owncloud/apps
-
-5. Activate
+- Download Master as Zip.
+- Unzip
+- Rename the Folder to `files_gpxviewer`
+- Upload to owncloud/apps
+- Activate
 
 
 [0]: http://leafletjs.com/
