@@ -1,3 +1,3 @@
 <?php
-require_once (__DIR__ . '/../ajax/installer.php');
+require_once (__DIR__ . '/../sys/installer.php');
 OCP\Util::addScript('files_gpxviewer', 'viewer' );
