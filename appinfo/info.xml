@@ -5,6 +5,6 @@
 	<description>Simple GPX viewer for ownCloud. Forked from MoriTanosuke (https://github.com/MoriTanosuke/), based on LeafletJS (http://leafletjs.com/)</description>
 	<version>0.1.a</version>
 	<licence>AGPL</licence>
-	<author>Kai Graßnick, Original Plugin by Carsten Ringe</author>
+	<author>Kai Graßnick</author>
 	<require>5</require>
 </info>
