@@ -6,7 +6,7 @@ function viewGpx(dir, file) {
     var location = fileDownloadPath(dir, file);
     console.log("Loading GPX from " + location);
 
-    // fade out file list and show pdf canvas
+    // fade out file list and show gpx canvas
     $('table').fadeOut('slow').promise().done(function(){
       var canvashtml = '<div id="gpx-canvas" style="width: 100%; height: 100%;"></div>';
       $('table').after(canvashtml);
@@ -38,18 +38,11 @@ function closegpxViewer(){
 }
 
 $(document).ready(function() {
-  if(typeof FileActions!=='undefined'){
-    var supportedMimes = new Array(
-      //TODO which mimetype to use? 'text/plain',
-      'text/gpx',
-      'application/gpx+xml');
-    for (var i = 0; i < supportedMimes.length; ++i){
-      var mime = supportedMimes[i];
-      FileActions.register(mime,'View',OC.PERMISSION_READ,'',function(filename){
-        viewGpx($('#dir').val(),filename);
-      });
-      FileActions.setDefault(mime,'View');
-    }
+  if ($('#filesApp').val() && typeof FileActions!=='undefined'){
+    FileActions.register('application/gpx','View', OC.PERMISSION_READ, '',function(filename){
+      viewGpx($('#dir').val(),filename);
+    });
+    FileActions.setDefault('application/gpx','View');
   }
 
   $('#gpx_close').live('click',function() {
