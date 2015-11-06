@@ -1,3 +1,9 @@
+OUTDATED!!! --- UNCONTINUED --- 
+
+see: https://apps.owncloud.com/content/show.php/GPX+Viewer+extended?content=168505
+
+
+
 GPX-Viewer for OwnCloud v 6.x
 ==================================
 
